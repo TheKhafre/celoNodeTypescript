@@ -18,7 +18,7 @@
 ## Start the node by running the command
     yarn run start:fullnode
 
-## Moonitoring the node
+## Monitoring the node
 ### to view the node status, run command:
     yarn run celo status
 ### to view log:

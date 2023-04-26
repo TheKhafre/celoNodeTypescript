@@ -1,11 +1,11 @@
 # Deploying a Celo Node using TypeScript: A Step-by-Step Guide
 
 # Introduction​
-Are you looking to join the ranks of those empowering the Celo network? Do you want to contribute to the global accessibility of financial systems? This is possible by deploying a node contributing to the network. In this article, we'll show you how to deploy a Celo node using TypeScript. We'll take it step by step and explain each part along the way, so you'll be able to understand better. Now, let's get started!
+Are you looking to join the ranks of those empowering the Celo network? Do you want to contribute to the global accessibility of financial systems? This is possible by deploying a node that allows you to contribute to the network. In this article, we'll show you how to deploy a Celo node using TypeScript which uses the celo-monorepo. We'll take it step by step and explain each part along the way, so you'll be able to understand better. Now, let's get started!
 
 # Prerequisites​
-We will deploy a celo node using typescript with this article but before we do that, you will need to have at least a basic understanding of:
-- Programming using Typescript 
+For you to be able to deploy using typescript, you will need to have at least a basic understanding of:
+- Programming using Typescript and error handling. 
 - The function of a node, including a basic idea of managing servers and networks.
 - Command-line interface for installing packages.
 
@@ -15,9 +15,9 @@ Before we begin, it's crucial to know that successfully running a Celo node requ
 # Setting Up Node
 ## Install Required Dependencies
 The first thing on the agenda is installing appropriate dependencies. In order to do so, here are some dependencies you will need to get ready:
-Node.js version 14 or higher, 
-Git, 
-and Yarn. 
+- Node.js version 14 or higher, 
+- Git, 
+- and Yarn. 
 
 You can find Node.js on its [official website](https://nodejs.org), but if you have one already installed on your machine, you can check the version by typing in the command: 
 ```
