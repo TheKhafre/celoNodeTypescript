@@ -7,7 +7,7 @@
 ## Generate Validator Key
     `yarn run generate:validator`
 
-## Create configuration file by copying the template into .env file with the command
+## Create configuration file by copying the template into a new file named .env file with the command
     cp .env.template .env
 
 ### the file should contain the following lines which should be adjusted accordingly:

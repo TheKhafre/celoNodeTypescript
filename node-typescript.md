@@ -4,17 +4,18 @@
 Are you looking to join the ranks of those empowering the Celo network? Do you want to contribute to the global accessibility of financial systems? This is possible by deploying a node that allows you to contribute to the network. In this article, we'll show you how to deploy a Celo node using TypeScript which uses the celo-monorepo. We'll take it step by step and explain each part along the way, so you'll be able to understand better. Now, let's get started!
 
 # Prerequisites​
-For you to be able to deploy using typescript, you will need to have at least a basic understanding of:
-- Programming using Typescript and error handling. 
-- The function of a node, including a basic idea of managing servers and networks.
-- Command-line interface for installing packages.
+We will deploy a celo node using typescript with this article. But before we do that, you will need to have at least a basic understanding of:
+- Programming using [Typescript](https://www.w3schools.com/typescript/) 
+- JavaScript frameworks such as [Nodejs](https://www.w3schools.com/nodejs/nodejs_intro.asp).
+- The [blockchain technologies](https://www.ibm.com/topics/blockchain) including concepts of permissioned blockchain networks, security, scalability, and  decentralized networks.
+- [Command-line](https://www.freecodecamp.org/news/command-line-for-beginners/) interface for installing packages.
 
 # Requirements​
 Before we begin, it's crucial to know that successfully running a Celo node requires significant technical expertise including a strong hardware and internet resources. Therefore, to run the node successfully, you should have at least 16GB of RAM to handle the workload. Other requirements include Node.js version 14 or higher, Git, and Yarn installed on your computer. Once you can meet up with these requirements we are good to go.
 
 # Setting Up Node
 ## Install Required Dependencies
-The first thing on the agenda is installing appropriate dependencies. In order to do so, here are some dependencies you will need to get ready:
+The first thing on the agenda is installing appropriate dependencies. In order to do so, here are some of the programs you will need to get ready:
 - Node.js version 14 or higher, 
 - Git, 
 - and Yarn. 
@@ -40,14 +41,19 @@ Once the monorepo shows up in the specified directory, the next step is to insta
 ```
 	yarn install
 ```
-This may take several minutes to install the needed packages for our project.
+This may take several minutes to install the needed packages for our project. Once the packages are installed successfully, you can proceed to build the new packages by running
+```
+	yarn build –ignore docs
+```
+The ignore option will help you skip most of the possible errors that might arise while building. This will look something like this:
+
 
 ## Generate Validator Key
 To run a Celo node, you will also need a validator key. This is a special key used to sign blocks and validate transactions. You can generate a validator key using the command: 
 ```
 	yarn run generate:validator
 ```
-Once generated, this key will be stored in the `~/.celo` directory. This can be used to access your node, so ensure you keep it safe and secure at all times. 
+This can be used to access your node, so ensure you keep the keys generated safe and secure at all times. 
 
 ## Create Configuration File
 
