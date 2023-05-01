@@ -1,7 +1,7 @@
 # Deploying a Celo Node using TypeScript: A Step-by-Step Guide
 
 # Introduction​
-Are you looking to join the ranks of those empowering the Celo network? Do you want to contribute to the global accessibility of financial systems? This is possible by deploying a node that allows you to contribute to the network. In this article, we'll show you how to deploy a Celo node using TypeScript which uses the celo-monorepo. We'll take it step by step and explain each part along the way, so you'll be able to understand better. Now, let's get started!
+Are you looking to join the ranks of those empowering the Celo network? Do you want to contribute to the global accessibility of financial systems? This is possible by deploying a node that allows you to contribute to the network. In this article, we'll show you how to deploy a Celo node using TypeScript which uses the celo-monorepo. We'll take it step by step and explain each part along the way so you'll be able to understand better. Now, let's get started!
 
 # Prerequisites​
 We will deploy a celo node using typescript with this article. But before we do that, you will need to have at least a basic understanding of:
@@ -35,7 +35,17 @@ The Celo blockchain is managed through a monorepo containing all the necessary p
 ```
 This will create a new directory/folder called `celo-monorepo` in your specified directory. The directory should look like this after cloning:
 
-Install Dependencies
+## Initialize the Project
+
+To initialize the project, run the npm initialization command below
+```
+	npm init -y
+```
+The command will initializes a new npm project and set it up using default settings. The final initialization process will be to install the TypeScript packages as a development dependency. To do this, use the command:
+```
+	npm install typescript --save-dev
+```
+## Install Dependencies
 
 Once the monorepo shows up in the specified directory, the next step is to install its dependencies. To do so, navigate to the celo-monorepo directory and run the following command:
 ```
@@ -61,13 +71,13 @@ Afterwards, create a configuration file for your node. It should include network
 ```
 	cp .env.template .env
 ```
-this will copy the files in the template to the .env file. Now go ahead and open the file, it should contain the following lines:
+this will copy the files in the template to the .env file. if for any reason the template file does not exist in the monorepo file, you don't need to panic about the error it throws, all you need to do is to create a new .env file and copy the lines of command below into it:
 ```
 	CELO_VALIDATOR_ADDRESS=<your-validator-address>
 	CELO_VALIDATOR_PRIVATE_KEY=<your-validator-private-key>
 	CELO_BOOTNODES=<comma-separated-list-of-bootnodes>
 ```
-All you need to do is update the three values – `address`, `private key`, and a `list of bootnodes` (which can be found on the [Celo monorepo](https://github.com/celo-org/celo-monorepo.git)) with your information. You can find a list of bootnodes in the .env file located in the packages/protocol directory of the Celo monorepo.
+However, you need to update the three values – `address`, `private key`, and a `list of bootnodes` (which can be found on the [Celo Website](https://celo.org/) or [Celo monorepo](https://github.com/celo-org/celo-monorepo.git)). You can find a list of bootnodes in the .env file located in the packages/protocol directory of the Celo monorepo.
 
 ## Start the Node
 
@@ -87,20 +97,25 @@ And view logs with:
 ```
 	yarn run celo logs
 ```
+## Dealing with errors
+
+One of the major problems that might give you error with setting up your node while working with the celo monorepo could be with outdated dependencies from the monorepo. When you get errors that say "depreciated", this indicates that the dependency now has a new version that has not been updated in the monorepo. 
+
+please check the monorepo later in the future when it will have been updated or you can also contribute to the Celo monorepo by contributing to the build to keep it up to date. To do this, simply fork the repository to your local machine to work on the update of the outdated dependencies.
 # Conclusion​
-Congrats! You have just deployed a Celo node with TypeScript. Although running a node requires extensive expertise and resources, it is a key way to contribute to the Celo network and the accessibility of global financial systems. Award yourself a pat on the back and happy validating!
+Congrats! You have just deployed a Celo node with TypeScript. Although running a node requires extensive expertise and resources, it is a key way to contribute to the Celo network and to the accessibility of global financial systems. Award yourself a pat on the back and happy validating!
 
 # Next Steps​
-Now that your node is up and running, another area you should definitely read more on becoming a [celo validator](https://docs.celo.org/network/mainnet/run-validator#:~:text=Celo%20uses%20a%20proof%2Dof,to%20register%20a%20Validator%20Group.) which will allow you to participate in validating transactions and adding them to the blockchain, ensuring the network's security and reliability.
+Now that your node is up and running, another area you should try to read more is how to become a [celo validator](https://docs.celo.org/network/mainnet/run-validator#:~:text=Celo%20uses%20a%20proof%2Dof,to%20register%20a%20Validator%20Group.) which will allow you to participate in validating transactions and adding them to the blockchain, ensuring the network's security and reliability.
 
 I'll be writing another article soon to guide you on how to manage your newly deployed node. Till then, you can keep learning more about Celo from the [Celo Documentation](https://docs.celo.org/).
 
 # About the Author​
-‘Tobi Olajide is an enthusiastic writer interested in blockchain technology and has been writing about it for over 3years. He is also a software engineer with over 2years of experience. You can connect with him on [twitter](https://twitter.com/MrOluwatobiHere) or [github](https://github.com/TheKhafre) to learn more about his programming joiurney.
+‘Tobi Olajide is an enthusiastic writer interested in blockchain technology and has been writing about it for over 3years. He is also a software engineer with over 2years of experience. You can connect with him on [twitter](https://twitter.com/MrOluwatobiHere) or [github](https://github.com/TheKhafre) to learn more about his programming journey.
 
 # References​
 - [Installing Latest Version of Nodejs](https://nodejs.org)
-- [The Celo Monorepo for Setting up Node](https://github.com/celo-org/celo-monorepo.git)
+- [The Celo Monorepo for Setting up a Celo Node](https://github.com/celo-org/celo-monorepo.git)
 - [How to Set Up a Celo Validator](https://docs.celo.org/network/mainnet/run-validator#:~:text=Celo%20uses%20a%20proof%2Dof,to%20register%20a%20Validator%20Group.)
 - [Learn more About Typescript](https://www.typescriptlang.org/docs/)
 - [Celo Documentation](https://docs.celo.org/)
