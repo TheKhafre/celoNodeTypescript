@@ -1,4 +1,17 @@
-# Deploying a Celo Node using TypeScript: A Step-by-Step Guide
+---
+title: Deploying a Celo Node Using Typescript
+description: In this article, we will show developers how to do deploy a celo node using TypeScript programming language
+authors:
+  - name: Oluwatobiloba Olajide
+    title: Technical Writer @Celo Foundation
+    url: https://github.com/TheKhafre
+    image_url: https://avatars.githubusercontent.com/u/105213608?v=4
+tags: [celo, celosage, typescript, nodejs, monorepo, intermediate]
+hide_table_of_contents: true
+slug: /tutorials/deploying-a-celo-node-using-typescript
+---
+
+![header](../../src/data-tutorials/showcase/intermediate/sage-integrating-celo-into-the-process-of-fintech-web-app-development.png)
 
 # Introduction​
 Are you looking to join the ranks of those empowering the Celo network? Do you want to contribute to the global accessibility of financial systems? This is possible by deploying a node that allows you to contribute to the network. In this article, we'll show you how to deploy a Celo node using TypeScript which uses the celo-monorepo. We'll take it step by step and explain each part along the way so you'll be able to understand better. Now, let's get started!
