@@ -1,11 +1,20 @@
 ## clone the celo monorepo to your machine with this command
     git clone github.com/celo-org/celo-monorepo.git
 
+## To initialize the project, run the npm initialization command below
+	npm init -y
+
+## Install the TypeScript packages as a development dependency. To do this, use the command:
+	npm install typescript --save-dev
+
 ## install dependencies with this command from the monorepo directory
     yarn install
 
+## build the new packages by running
+	yarn build –ignore docs
+
 ## Generate Validator Key
-    `yarn run generate:validator`
+    yarn run generate:validator
 
 ## Create configuration file by copying the template into a new file named .env file with the command
     cp .env.template .env
